@@ -19,10 +19,10 @@ const Movie = (props) => {
 
   },[id]);
   
-  const saveMovie = () => {
-    const addToSavedList = props.addToSavedList;
-    addToSavedList(movie)
-  }
+  // const saveMovie = () => {
+  //   const addToSavedList = props.addToSavedList;
+  //   addToSavedList(movie)
+  // }
 
   if (!movie) {
     return <div>Loading movie information...</div>;
@@ -47,8 +47,7 @@ const Movie = (props) => {
           </div>
         ))}
       </div>
-      {/* <div onClick={() => props.addToSavedList(movie)} className="save-button">Save</div>
-      {console.log(props.addToSavedList(movie))} */}
+      <div onClick={() => props.addToSavedList(movie)} className="save-button">Save</div>
     </div>
   );
 }
